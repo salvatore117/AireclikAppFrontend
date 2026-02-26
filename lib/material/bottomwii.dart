@@ -56,6 +56,7 @@ class _WiiButtonState extends State<WiiButton> with SingleTickerProviderStateMix
                 // El borde gris clásico de la Wii
                 border: Border.all(color: Colors.grey.shade300, width: 2),
                 boxShadow: [
+                  
                   // Sombra de profundidad que desaparece cuando se presiona
                   BoxShadow(
                     color: Colors.black.withOpacity(0.1),

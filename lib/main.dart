@@ -1,4 +1,4 @@
-import 'package:aireclikapp/pantallaDeInicio.dart';
+import 'package:aireclikapp/loginPantalla.dart/pantalla_De_Inicio.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
