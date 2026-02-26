@@ -1,6 +1,6 @@
 # aireclikapp
 
-A new Flutter project.
+un proyecto de fronted para la aplicacion de aireclik C.A una empresa dedicada a servicios de refrigeracion 
 
 ## Getting Started
 
