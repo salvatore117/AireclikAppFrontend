@@ -1,4 +1,4 @@
-import 'package:aireclikapp/loginPantalla.dart/pantalla_De_Inicio.dart';
+import 'package:aireclikapp/loginPantalla.dart/pantalla_inicio.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
@@ -10,11 +10,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-initialRoute: '/',
-  routes: {
-    '/': (context) => PantallaDeInicio(),
-
-  },
+      initialRoute: '/',
+      routes: {'/': (context) => PantallaDeInicio()},
     );
   }
 }

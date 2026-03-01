@@ -10,7 +10,8 @@ class WiiButton extends StatefulWidget {
   State<WiiButton> createState() => _WiiButtonState();
 }
 
-class _WiiButtonState extends State<WiiButton> with SingleTickerProviderStateMixin {
+class _WiiButtonState extends State<WiiButton>
+    with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _scaleAnimation;
 
@@ -23,9 +24,10 @@ class _WiiButtonState extends State<WiiButton> with SingleTickerProviderStateMix
     );
 
     // El botón se encoge un 5% al presionarlo
-    _scaleAnimation = Tween<double>(begin: 1.0, end: 0.95).animate(
-      CurvedAnimation(parent: _controller, curve: Curves.easeInOut),
-    );
+    _scaleAnimation = Tween<double>(
+      begin: 1.0,
+      end: 0.95,
+    ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut));
   }
 
   @override
@@ -56,16 +58,17 @@ class _WiiButtonState extends State<WiiButton> with SingleTickerProviderStateMix
                 // El borde gris clásico de la Wii
                 border: Border.all(color: Colors.grey.shade300, width: 2),
                 boxShadow: [
-                  
                   // Sombra de profundidad que desaparece cuando se presiona
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.1),
+                    color: Colors.black.withValues(alpha: 0.1),
                     blurRadius: _controller.value * 2,
                     offset: Offset(0, 4 - (4 * _controller.value)),
                   ),
                   // El "Glow" azul sutil característico
                   BoxShadow(
-                    color: Colors.blue.withOpacity(0.50 * _controller.value),
+                    color: Colors.blue.withValues(
+                      alpha: 0.50 * _controller.value,
+                    ),
                     blurRadius: 15,
                     spreadRadius: 5 * _controller.value,
                   ),
